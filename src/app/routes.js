@@ -1,11 +1,11 @@
 import {createBrowserRouter} from 'react-router-dom'
 import {Layout} from './layout.jsx'
-import {Home} from '../pages/home.jsx'
-import {Orders} from '../pages/orders.jsx'
-import {Cart} from '../pages/cart.jsx'
-import {Favorites} from '../pages/favorites.jsx'
-import {Auth} from '../pages/auth.jsx'
-import {NotFound} from '../pages/not-found.jsx'
+import {Home, ProductDetail} from '../modules/Products/index.js'
+import {Orders} from '../modules/Orders/index.js'
+import {Cart} from '../modules/Cart/index.js'
+import {Favorites} from '../modules/Favorites/index.js'
+import {Auth} from '../modules/Auth/index.js'
+import {NotFound} from './not-found.jsx'
 import {ProtectedRoute} from './protected-route.jsx'
 
 export const routes = createBrowserRouter([
@@ -14,15 +14,15 @@ export const routes = createBrowserRouter([
         Component: Layout,
         errorElement: NotFound,
         children: [
-            { index: true, Component: Home },
-            { path: 'auth', Component: Auth },
-            { path: 'products/:productId', Component: Orders },
+            {index: true, Component: Home},
+            {path: 'auth', Component: Auth},
+            {path: 'products/:productId', Component: ProductDetail},
             {
                 Component: ProtectedRoute,
                 children: [
-                    { path: 'orders', Component: Orders },
-                    { path: 'cart', Component: Cart },
-                    { path: 'favorites', Component: Favorites },
+                    {path: 'orders', Component: Orders},
+                    {path: 'cart', Component: Cart},
+                    {path: 'favorites', Component: Favorites},
                 ]
             },
         ]

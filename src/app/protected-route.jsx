@@ -1,4 +1,4 @@
-import {useAuth} from '../hooks/use-auth.js'
+import {useAuth} from '../modules/Auth/index.js'
 import {toast} from 'sonner'
 import {Navigate, Outlet} from 'react-router-dom'
 

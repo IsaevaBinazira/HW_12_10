@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
-import {useRegisterMutation} from '../store/auth-store.js'
+import {useRegisterMutation} from '../auth-store.js'
 
 export function RegisterForm() {
     const [login, setLogin] = useState('')

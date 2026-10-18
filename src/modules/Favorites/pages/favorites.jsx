@@ -1,13 +1,15 @@
-import {useProductStore} from '../store/product-store.js'
+import { useFavoritesStore } from '../favorites-store.js'
 
-export function Home() {
-    const { data, isLoading } = useProductStore()
+export function Favorites() {
+    const { data, isLoading, refetch } = useFavoritesStore()
 
     if (isLoading) return <progress />
 
     return (
         <>
-            <h1 className={'text-4xl font-bold'}>Products</h1>
+            <h1 className={'text-4xl font-bold'}>Favorites</h1>
+
+            <button onClick={refetch}>REFETCH</button>
 
             <ul>
                 {data?.map((item) => (

@@ -1,5 +1,5 @@
 import {useQuery} from '@tanstack/react-query'
-import {$authApi} from '../api/http.js'
+import { $authApi } from '../../shared/api/http.js'
 
 export const useFavoritesStore = () => useQuery({
     queryKey: ['favorites'],

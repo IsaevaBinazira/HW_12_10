@@ -1,6 +1,5 @@
 import {NavLink} from 'react-router-dom'
-import {useAuth} from '../hooks/use-auth.js'
-import {useLogoutMutation} from '../store/auth-store.js'
+import {useAuth, useLogoutMutation} from '../modules/Auth/index.js'
 
 const navigation = [
     {to: '/orders', label: 'Заказы', icon: OrdersIcon},

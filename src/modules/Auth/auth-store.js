@@ -1,9 +1,8 @@
 import {useMutation} from '@tanstack/react-query'
-import {$mainApi} from '../api/http.js'
+import { $mainApi } from '../../shared/api/http.js'
 import {useNavigate} from 'react-router-dom'
 import {toast} from 'sonner'
-import {useAuth} from '../hooks/use-auth.js'
-
+import { useAuth } from './hooks/use-auth.js'
 export const useRegisterMutation = () => {
     const navigate = useNavigate()
 

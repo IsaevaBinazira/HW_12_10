@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
-import {useLoginMutation} from '../store/auth-store.js'
+import {useLoginMutation} from '../auth-store.js'
 
 // react-hook-form
 // zod

@@ -1,6 +1,6 @@
-import {useSearchParam} from '../hooks/use-search-param.js'
-import {LoginForm} from '../components/login-form.jsx'
-import {RegisterForm} from '../components/register-form.jsx'
+import { useSearchParam } from "../../../shared/hooks/use-search-param.js";
+import { LoginForm } from "../components/login-form.jsx";
+import { RegisterForm } from "../components/register-form.jsx";
 
 export function Auth() {
     const { get } = useSearchParam()
